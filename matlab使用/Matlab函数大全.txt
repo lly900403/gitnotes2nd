@@ -1,0 +1,1279 @@
+Matlab函数大全
+
+
+信源函数
+randerr 产生比特误差样本
+randint 产生均匀分布的随机整数矩阵
+randsrc 根据给定的数字表产生随机矩阵
+wgn 产生高斯白噪声 
+信号分析函数
+biterr 计算比特误差数和比特误差率
+eyediagram   绘制眼图
+scatterplot 绘制分布图
+symerr 计算符号误差数和符号误差率
+
+信源编码
+compand mu律/A律 压缩/扩张
+dpcmdeco DPCM（差分脉冲编码调制）解码
+dpcmenco DPCM编码
+dpcmopt 优化DPCM参数
+lloyds Lloyd法则优化量化器参数
+quantiz 给出量化后的级和输出值
+
+误差控制编码
+bchpoly 给出二进制BCH码的性能参数和产生多项式
+convenc 产生卷积码
+cyclgen 产生循环码的奇偶校验阵和生成矩阵
+cyclpoly 产生循环码的生成多项式
+decode 分组码解码器
+encode 分组码编码器
+gen2par 将奇偶校验阵和生成矩阵互相转换
+gfweight 计算线性分组码的最小距离
+hammgen 产生汉明码的奇偶校验阵和生成矩阵
+rsdecof 对Reed-Solomon编码的ASCII文件解码
+rsencof 用Reed-Solomon码对ASCII文件编码
+rspoly 给出Reed-Solomon码的生成多项式
+syndtable 产生伴随解码表
+vitdec 用Viterbi法则解卷积码
+
+（误差控制编码的低级函数）
+bchdeco BCH解码器
+bchenco BCH编码器
+rsdeco Reed-Solomon解码器
+rsdecode 用指数形式进行Reed-Solomon解码
+rsenco Reed-Solomon编码器
+rsencode 用指数形式进行Reed-Solomon编码
+
+调制与解调
+ademod 模拟通带解调器
+ademodce 模拟基带解调器
+amod 模拟通带调制器
+amodce 模拟基带调制器
+apkconst 绘制圆形的复合ASK-PSK星座图
+ddemod 数字通带解调器
+ddemodce 数字基带解调器
+demodmap 解调后的模拟信号星座图反映射到数字信号
+dmod 数字通带调制器
+dmodce 数字基带调制器
+modmap 把数字信号映射到模拟信号星座图（以供调制）
+qaskdeco 从方形的QASK星座图反映射到数字信号
+qaskenco 把数字信号映射到方形的QASK星座图
+
+专用滤波器
+hank2sys 把一个Hankel矩阵转换成一个线性系统模型
+hilbiir 设计一个希尔伯特变换IIR滤波器
+rcosflt 升余弦滤波器
+rcosine 设计一个升余弦滤波器
+
+（专用滤波器的低级函数）
+rcosfir 设计一个升余弦FIR滤波器
+rcosiir 设计一个升余弦IIR滤波器
+
+信道函数
+awgn 添加高斯白噪声
+
+伽罗域计算
+gfadd 伽罗域上的多项式加法
+gfconv 伽罗域上的多项式乘法
+gfcosets 生成伽罗域的分圆陪集
+gfdeconv 伽罗域上的多项式除法
+gfdiv 伽罗域上的元素除法
+gffilter 在质伽罗域上用多项式过滤数据
+gflineq 在至伽罗域上求Ax=b的一个特解
+gfminpol 求伽罗域上元素的最小多项式
+gfmul 伽罗域上的元素乘法
+gfplus GF（2^m）上的元素加法
+gfpretty 以通常方式显示多项式
+gfprimck 检测多项式是否是基本多项式
+gfprimdf 给出伽罗域的MATLAB默认的基本多项式
+gfprimfd 给出伽罗域的基本多项式
+gfrank 伽罗域上矩阵求秩
+gfrepcov GF（2）上多项式的表达方式转换
+gfroots 质伽罗域上的多项式求根
+gfsub 伽罗域上的多项式减法
+gftrunc 使多项式的表达最简化
+gftuple 简化或转换伽罗域上元素的形式
+
+
+工具函数
+bi2de 把二进制向量转换成十进制数
+de2bi 把十进制数转换成二进制向量
+erf 误差函数
+erfc 余误差函数
+istrellis 检测输入是否MATLAB的trellis结构（structure）
+marcumq 通用Marcum Q 函数
+oct2dec 八进制数转十进制数
+poly2trellis 把卷积码多项式转换成MATLAB的trellis描述
+vec2mat 把向量转换成矩阵
+
+——————————————————————————————————————————————————
+A a 
+abs 绝对值、模、字符的ASCII码值 
+acos 反余弦 
+acosh 反双曲余弦 
+acot 反余切 
+acoth 反双曲余切 
+acsc 反余割 
+acsch 反双曲余割 
+align 启动图形对象几何位置排列工具 
+all 所有元素非零为真 
+angle 相角 
+ans 表达式计算结果的缺省变量名 
+any 所有元素非全零为真 
+area 面域图 
+argnames 函数M文件宗量名 
+asec 反正割 
+asech 反双曲正割 
+asin 反正弦 
+asinh 反双曲正弦 
+assignin 向变量赋值 
+atan 反正切 
+atan2 四象限反正切 
+atanh 反双曲正切 
+autumn 红黄调秋色图阵 
+axes 创建轴对象的低层指令 
+axis 控制轴刻度和风格的高层指令 
+
+
+B b 
+
+bar 二维直方图 
+bar3 三维直方图 
+bar3h 三维水平直方图 
+barh 二维水平直方图 
+base2dec X进制转换为十进制 
+bin2dec 二进制转换为十进制 
+blanks 创建空格串 
+bone 蓝色调黑白色图阵 
+box 框状坐标轴 
+break while 或for 环中断指令 
+brighten 亮度控制 
+
+
+C c 
+
+capture （3版以前）捕获当前图形 
+cart2pol 直角坐标变为极或柱坐标 
+cart2sph 直角坐标变为球坐标 
+cat 串接成高维数组 
+caxis 色标尺刻度 
+cd 指定当前目录 
+cdedit 启动用户菜单、控件回调函数设计工具 
+cdf2rdf 复数特征值对角阵转为实数块对角阵 
+ceil 向正无穷取整 
+cell 创建元胞数组 
+cell2struct 元胞数组转换为构架数组 
+celldisp 显示元胞数组内容 
+cellplot 元胞数组内部结构图示 
+char 把数值、符号、内联类转换为字符对象 
+chi2cdf 分布累计概率函数 
+chi2inv 分布逆累计概率函数 
+chi2pdf 分布概率密度函数 
+chi2rnd 分布随机数发生器 
+chol Cholesky分解 
+clabel 等位线标识 
+cla 清除当前轴 
+class 获知对象类别或创建对象 
+clc 清除指令窗 
+clear 清除内存变量和函数 
+clf 清除图对象 
+clock 时钟 
+colorcube 三浓淡多彩交叉色图矩阵 
+colordef 设置色彩缺省值 
+colormap 色图 
+colspace 列空间的基 
+close 关闭指定窗口 
+colperm 列排序置换向量 
+comet 彗星状轨迹图 
+comet3 三维彗星轨迹图 
+compass 射线图 
+compose 求复合函数 
+cond （逆）条件数 
+condeig 计算特征值、特征向量同时给出条件数 
+condest 范 -1条件数估计 
+conj 复数共轭 
+contour 等位线 
+contourf 填色等位线 
+contour3 三维等位线 
+contourslice 四维切片等位线图 
+conv 多项式乘、卷积 
+cool 青紫调冷色图 
+copper 古铜调色图 
+cos 余弦 
+cosh 双曲余弦 
+cot 余切 
+coth 双曲余切 
+cplxpair 复数共轭成对排列 
+csc 余割 
+csch 双曲余割 
+cumsum 元素累计和 
+cumtrapz 累计梯形积分 
+cylinder 创建圆柱 
+
+
+D d 
+
+dblquad 二重数值积分 
+deal 分配宗量 
+deblank 删去串尾部的空格符 
+dec2base 十进制转换为X进制 
+dec2bin 十进制转换为二进制 
+dec2hex 十进制转换为十六进制 
+deconv 多项式除、解卷 
+delaunay Delaunay 三角剖分 
+del2 离散Laplacian差分 
+demo Matlab演示 
+det 行列式 
+diag 矩阵对角元素提取、创建对角阵 
+diary Matlab指令窗文本内容记录 
+diff 数值差分、符号微分 
+digits 符号计算中设置符号数值的精度 
+dir 目录列表 
+disp 显示数组 
+display 显示对象内容的重载函数 
+dlinmod 离散系统的线性化模型 
+dmperm 矩阵Dulmage-Mendelsohn 分解 
+dos 执行DOS 指令并返回结果 
+double 把其他类型对象转换为双精度数值 
+drawnow 更新事件队列强迫Matlab刷新屏幕 
+dsolve 符号计算解微分方程 
+
+
+E e 
+
+echo M文件被执行指令的显示 
+edit 启动M文件编辑器 
+eig 求特征值和特征向量 
+eigs 求指定的几个特征值 
+end 控制流FOR等结构体的结尾元素下标 
+eps 浮点相对精度 
+error 显示出错信息并中断执行 
+errortrap 错误发生后程序是否继续执行的控制 
+erf 误差函数 
+erfc 误差补函数 
+erfcx 刻度误差补函数 
+erfinv 逆误差函数 
+errorbar 带误差限的曲线图 
+etreeplot 画消去树 
+eval 串演算指令 
+evalin 跨空间串演算指令 
+exist 检查变量或函数是否已定义 
+exit 退出Matlab环境 
+exp 指数函数 
+expand 符号计算中的展开操作 
+expint 指数积分函数 
+expm 常用矩阵指数函数 
+expm1 Pade法求矩阵指数 
+expm2 Taylor法求矩阵指数 
+expm3 特征值分解法求矩阵指数 
+eye 单位阵 
+ezcontour 画等位线的简捷指令 
+ezcontourf 画填色等位线的简捷指令 
+ezgraph3 画表面图的通用简捷指令 
+ezmesh 画网线图的简捷指令 
+ezmeshc 画带等位线的网线图的简捷指令 
+ezplot 画二维曲线的简捷指令 
+ezplot3 画三维曲线的简捷指令 
+ezpolar 画极坐标图的简捷指令 
+ezsurf 画表面图的简捷指令 
+ezsurfc 画带等位线的表面图的简捷指令 
+
+ 
+
+F f 
+
+factor 符号计算的因式分解 
+feather 羽毛图 
+feedback 反馈连接 
+feval 执行由串指定的函数 
+fft 离散Fourier变换 
+fft2 二维离散Fourier变换 
+fftn 高维离散Fourier变换 
+fftshift 直流分量对中的谱 
+fieldnames 构架域名 
+figure 创建图形窗 
+fill3 三维多边形填色图 
+find 寻找非零元素下标 
+findobj 寻找具有指定属性的对象图柄 
+findstr 寻找短串的起始字符下标 
+findsym 机器确定内存中的符号变量 
+finverse 符号计算中求反函数 
+fix 向零取整 
+flag 红白蓝黑交错色图阵 
+fliplr 矩阵的左右翻转 
+flipud 矩阵的上下翻转 
+flipdim 矩阵沿指定维翻转 
+floor 向负无穷取整 
+flops 浮点运算次数 
+flow Matlab提供的演示数据 
+fmin 求单变量非线性函数极小值点（旧版） 
+fminbnd 求单变量非线性函数极小值点 
+fmins 单纯形法求多变量函数极小值点（旧版） 
+fminunc 拟牛顿法求多变量函数极小值点 
+fminsearch 单纯形法求多变量函数极小值点 
+fnder 对样条函数求导 
+fnint 利用样条函数求积分 
+fnval 计算样条函数区间内任意一点的值 
+fnplt 绘制样条函数图形 
+fopen 打开外部文件 
+for 构成for环用 
+format 设置输出格式 
+fourier Fourier 变换 
+fplot 返函绘图指令 
+fprintf 设置显示格式 
+fread 从文件读二进制数据 
+fsolve 求多元函数的零点 
+full 把稀疏矩阵转换为非稀疏阵 
+funm 计算一般矩阵函数 
+funtool 函数计算器图形用户界面 
+fzero 求单变量非线性函数的零点 
+
+
+G g 
+
+gamma 函数 
+gammainc 不完全 函数 
+gammaln 函数的对数 
+gca 获得当前轴句柄 
+gcbo 获得正执行"回调"的对象句柄 
+gcf 获得当前图对象句柄 
+gco 获得当前对象句柄 
+geomean 几何平均值 
+get 获知对象属性 
+getfield 获知构架数组的域 
+getframe 获取影片的帧画面 
+ginput 从图形窗获取数据 
+global 定义全局变量 
+gplot 依图论法则画图 
+gradient 近似梯度 
+gray 黑白灰度 
+grid 画分格线 
+griddata 规则化数据和曲面拟合 
+gtext 由鼠标放置注释文字 
+guide 启动图形用户界面交互设计工具 
+
+
+H h 
+
+harmmean 调和平均值 
+help 在线帮助 
+helpwin 交互式在线帮助 
+helpdesk 打开超文本形式用户指南 
+hex2dec 十六进制转换为十进制 
+hex2num 十六进制转换为浮点数 
+hidden 透视和消隐开关 
+hilb Hilbert矩阵 
+hist 频数计算或频数直方图 
+histc 端点定位频数直方图 
+histfit 带正态拟合的频数直方图 
+hold 当前图上重画的切换开关 
+horner 分解成嵌套形式 
+hot 黑红黄白色图 
+hsv 饱和色图 
+
+
+I i 
+
+if-else-elseif 条件分支结构 
+ifft 离散Fourier反变换 
+ifft2 二维离散Fourier反变换 
+ifftn 高维离散Fourier反变换 
+ifftshift 直流分量对中的谱的反操作 
+ifourier Fourier反变换 
+i, j 缺省的"虚单元"变量 
+ilaplace Laplace反变换 
+imag 复数虚部 
+image 显示图象 
+imagesc 显示亮度图象 
+imfinfo 获取图形文件信息 
+imread 从文件读取图象 
+imwrite 把imwrite 把图象写成文件 
+ind2sub 单下标转变为多下标 
+inf 无穷大 
+info MathWorks公司网点地址 
+inline 构造内联函数对象 
+inmem 列出内存中的函数名 
+input 提示用户输入 
+inputname 输入宗量名 
+int 符号积分 
+int2str 把整数数组转换为串数组 
+interp1 一维插值 
+interp2 二维插值 
+interp3 三维插值 
+interpn N维插值 
+interpft 利用FFT插值 
+intro Matlab自带的入门引导 
+inv 求矩阵逆 
+invhilb Hilbert矩阵的准确逆 
+ipermute 广义反转置 
+isa 检测是否给定类的对象 
+ischar 若是字符串则为真 
+isequal 若两数组相同则为真 
+isempty 若是空阵则为真 
+isfinite 若全部元素都有限则为真 
+isfield 若是构架域则为真 
+isglobal 若是全局变量则为真 
+ishandle 若是图形句柄则为真 
+ishold 若当前图形处于保留状态则为真 
+isieee 若计算机执行IEEE规则则为真 
+isinf 若是无穷数据则为真 
+isletter 若是英文字母则为真 
+islogical 若是逻辑数组则为真 
+ismember 检查是否属于指定集 
+isnan 若是非数则为真 
+isnumeric 若是数值数组则为真 
+isobject 若是对象则为真 
+isprime 若是质数则为真 
+isreal 若是实数则为真 
+isspace 若是空格则为真 
+issparse 若是稀疏矩阵则为真 
+isstruct 若是构架则为真 
+isstudent 若是Matlab学生版则为真 
+iztrans 符号计算Z反变换 
+
+
+J j , K k 
+
+jacobian 符号计算中求Jacobian 矩阵 
+jet 蓝头红尾饱和色 
+jordan 符号计算中获得 Jordan标准型 
+keyboard 键盘获得控制权 
+kron Kronecker乘法规则产生的数组 
+
+
+L l 
+
+laplace Laplace变换 
+lasterr 显示最新出错信息 
+lastwarn 显示最新警告信息 
+leastsq 解非线性最小二乘问题（旧版） 
+legend 图形图例 
+lighting 照明模式 
+line 创建线对象 
+lines 采用plot 画线色 
+linmod 获连续系统的线性化模型 
+linmod2 获连续系统的线性化精良模型 
+linspace 线性等分向量 
+ln 矩阵自然对数 
+load 从MAT文件读取变量 
+log 自然对数 
+log10 常用对数 
+log2 底为2的对数 
+loglog 双对数刻度图形 
+logm 矩阵对数 
+logspace 对数分度向量 
+lookfor 按关键字搜索M文件 
+lower 转换为小写字母 
+lsqnonlin 解非线性最小二乘问题 
+lu LU分解 
+
+
+M m 
+
+mad 平均绝对值偏差 
+magic 魔方阵 
+maple &nb, sp; 运作 Maple格式指令 
+mat2str 把数值数组转换成输入形态串数组 
+material 材料反射模式 
+max 找向量中最大元素 
+mbuild 产生EXE文件编译环境的预设置指令 
+mcc 创建MEX或EXE文件的编译指令 
+mean 求向量元素的平均值 
+median 求中位数 
+menuedit 启动设计用户菜单的交互式编辑工具 
+mesh 网线图 
+meshz 垂帘网线图 
+meshgrid 产生"格点"矩阵 
+methods 获知对指定类定义的所有方法函数 
+mex 产生MEX文件编译环境的预设置指令 
+mfunlis 能被mfun计算的MAPLE经典函数列表 
+mhelp 引出 Maple的在线帮助 
+min 找向量中最小元素 
+mkdir 创建目录 
+mkpp 逐段多项式数据的明晰化 
+mod 模运算 
+more 指令窗中内容的分页显示 
+movie 放映影片动画 
+moviein 影片帧画面的内存预置 
+mtaylor 符号计算多变量Taylor级数展开 
+
+
+N n 
+
+ndims 求数组维数 
+NaN 非数（预定义）变量 
+nargchk 输入宗量数验证 
+nargin 函数输入宗量数 
+nargout 函数输出宗量数 
+ndgrid 产生高维格点矩阵 
+newplot 准备新的缺省图、轴 
+nextpow2 取最接近的较大2次幂 
+nnz 矩阵的非零元素总数 
+nonzeros 矩阵的非零元素 
+norm 矩阵或向量范数 
+normcdf 正态分布累计概率密度函数 
+normest 估计矩阵2范数 
+norminv 正态分布逆累计概率密度函数 
+normpdf 正态分布概率密度函数 
+normrnd 正态随机数发生器 
+notebook 启动Matlab和Word的集成环境 
+null 零空间 
+num2str 把非整数数组转换为串 
+numden 获取最小公分母和相应的分子表达式 
+nzmax 指定存放非零元素所需内存 
+
+
+O o 
+
+ode1 非Stiff 微分方程变步长解算器 
+ode15s Stiff 微分方程变步长解算器 
+ode23t 适度Stiff 微分方程解算器 
+ode23tb Stiff 微分方程解算器 
+ode45 非Stiff 微分方程变步长解算器 
+odefile ODE 文件模板 
+odeget 获知ODE 选项设置参数 
+odephas2 ODE 输出函数的二维相平面图 
+odephas3 ODE 输出函数的三维相空间图 
+odeplot ODE 输出函数的时间轨迹图 
+odeprint 在Matlab指令窗显示结果 
+odeset 创建或改写 ODE选项构架参数值 
+ones 全1数组 
+optimset 创建或改写优化泛函指令的选项参数值 
+orient 设定图形的排放方式 
+orth 值空间正交化 
+
+
+P p 
+
+pack 收集Matlab内存碎块扩大内存 
+pagedlg 调出图形排版对话框 
+patch 创建块对象 
+path 设置Matlab搜索路径的指令 
+pathtool 搜索路径管理器 
+pause 暂停 
+pcode 创建预解译P码文件 
+pcolor 伪彩图 
+peaks Matlab提供的典型三维曲面 
+permute 广义转置 
+pi （预定义变量）圆周率 
+pie 二维饼图 
+pie3 三维饼图 
+pink 粉红色图矩阵 
+pinv 伪逆 
+plot 平面线图 
+plot3 三维线图 
+plotmatrix 矩阵的散点图 
+plotyy 双纵坐标图 
+poissinv 泊松分布逆累计概率分布函数 
+poissrnd 泊松分布随机数发生器 
+pol2cart 极或柱坐标变为直角坐标 
+polar 极坐标图 
+poly 矩阵的特征多项式、根集对应的多项式 
+poly2str 以习惯方式显示多项式 
+poly2sym 双精度多项式系数转变为向量符号多项式 
+polyder 多项式导数 
+polyfit 数据的多项式拟合 
+polyval 计算多项式的值 
+polyvalm 计算矩阵多项式 
+pow2 2的幂 
+ppval 计算分段多项式 
+pretty 以习惯方式显示符号表达式 
+print 打印图形或SIMULINK模型 
+printsys 以习惯方式显示有理分式 
+prism 光谱色图矩阵 
+procread 向MAPLE输送计算程序 
+profile 函数文件性能评估器 
+propedit 图形对象属性编辑器 
+pwd 显示当前工作目录 
+
+
+Q q 
+
+quad 低阶法计算数值积分 
+quad8 高阶法计算数值积分(QUADL) 
+quit 推出Matlab 环境 
+quiver 二维方向箭头图 
+quiver3 三维方向箭头图 
+
+
+R r 
+
+rand 产生均匀分布随机数 
+randn 产生正态分布随机数 
+randperm 随机置换向量 
+range 样本极差 
+rank 矩阵的秩 
+rats 有理输出 
+rcond 矩阵倒条件数估计 
+real 复数的实部 
+reallog 在实数域内计算自然对数 
+realpow 在实数域内计算乘方 
+realsqrt 在实数域内计算平方根 
+realmax 最大正浮点数 
+realmin 最小正浮点数 
+rectangle 画"长方框" 
+rem 求余数 
+repmat 铺放模块数组 
+reshape 改变数组维数、大小 
+residue 部分分式展开 
+return 返回 
+ribbon 把二维曲线画成三维彩带图 
+rmfield 删去构架的域 
+roots 求多项式的根 
+rose 数扇形图 
+rot90 矩阵旋转90度 
+rotate 指定的原点和方向旋转 
+rotate3d 启动三维图形视角的交互设置功能 
+round 向最近整数圆整 
+rref 简化矩阵为梯形形式 
+rsf2csf 实数块对角阵转为复数特征值对角阵 
+rsums Riemann和S s 
+
+save 把内存变量保存为文件 
+scatter 散点图 
+scatter3 三维散点图 
+sec 正割 
+sech 双曲正割 
+semilogx X轴对数刻度坐标图 
+semilogy Y轴对数刻度坐标图 
+series 串联连接 
+set 设置图形对象属性 
+setfield 设置构架数组的域 
+setstr 将ASCII码转换为字符的旧版指令 
+sign 根据符号取值函数 
+signum 符号计算中的符号取值函数 
+sim 运行SIMULINK模型 
+simget 获取SIMULINK模型设置的仿真参数 
+simple 寻找最短形式的符号解 
+simplify 符号计算中进行简化操作 
+simset 对SIMULINK模型的仿真参数进行设置 
+simulink 启动SIMULINK模块库浏览器 
+sin 正弦 
+sinh 双曲正弦 
+size 矩阵的大小 
+slice 立体切片图 
+solve 求代数方程的符号解 
+spalloc 为非零元素配置内存 
+sparse 创建稀疏矩阵 
+spconvert 把外部数据转换为稀疏矩阵 
+spdiags 稀疏对角阵 
+spfun 求非零元素的函数值 
+sph2cart 球坐标变为直角坐标 
+sphere 产生球面 
+spinmap 色图彩色的周期变化 
+spline 样条插值 
+spones 用1置换非零元素 
+sprandsym 稀疏随机对称阵 
+sprank 结构秩 
+spring 紫黄调春色图 
+sprintf 把格式数据写成串 
+spy 画稀疏结构图 
+sqrt 平方根 
+sqrtm 方根矩阵 
+squeeze 删去大小为1的"孤维" 
+sscanf 按指定格式读串 
+stairs 阶梯图 
+std 标准差 
+stem 二维杆图 
+step 阶跃响应指令 
+str2double 串转换为双精度值 
+str2mat 创建多行串数组 
+str2num 串转换为数 
+strcat 接成长串 
+strcmp 串比较 
+strjust 串对齐 
+strmatch 搜索指定串 
+strncmp 串中前若干字符比较 
+strrep 串替换 
+strtok 寻找第一间隔符前的内容 
+struct 创建构架数组 
+struct2cell 把构架转换为元胞数组 
+strvcat 创建多行串数组 
+sub2ind 多下标转换为单下标 
+subexpr 通过子表达式重写符号对象 
+subplot 创建子图 
+subs 符号计算中的符号变量置换 
+subspace 两子空间夹角 
+sum 元素和 
+summer 绿黄调夏色图 
+superiorto 设定优先级 
+surf 三维着色表面图 
+surface 创建面对象 
+surfc 带等位线的表面图 
+surfl 带光照的三维表面图 
+surfnorm 空间表面的法线 
+svd 奇异值分解 
+svds 求指定的若干奇异值 
+switch-case-otherwise 多分支结构 
+sym2poly 符号多项式转变为双精度多项式系数向量 
+symmmd 对称最小度排序 
+symrcm 反向Cuthill-McKee排序 
+syms 创建多个符号对象 
+
+
+T t 
+
+tan 正切 
+tanh 双曲正切 
+taylortool 进行Taylor逼近分析的交互界面 
+text 文字注释 
+tf 创建传递函数对象 
+tic 启动计时器 
+title 图名 
+toc 关闭计时器 
+trapz 梯形法数值积分 
+treelayout 展开树、林 
+treeplot 画树图 
+tril 下三角阵 
+trim 求系统平衡点 
+trimesh 不规则格点网线图 
+trisurf 不规则格点表面图 triu 上三角阵 try-catch 控制流中的Try-catch结构 type 显示M文件 
+U u 
+uicontextmenu 创建现场菜单 
+uicontrol 创建用户控件 
+uimenu 创建用户菜单 
+unmkpp 逐段多项式数据的反明晰化 
+unwrap 自然态相角 
+upper 转换为大写字母 
+
+
+V v 
+
+var 方差 
+varargin 变长度输入宗量 
+varargout 变长度输出宗量 
+vectorize 使串表达式或内联函数适于数组运算 
+ver 版本信息的获取 
+view 三维图形的视角控制 
+voronoi Voronoi多边形 
+vpa 任意精度（符号类）数值 
+
+
+W w 
+
+warning 显示警告信息 
+what 列出当前目录上的文件 
+whatsnew 显示Matlab中 Readme文件的内容 
+which 确定函数、文件的位置 
+while 控制流中的While环结构 
+white 全白色图矩阵 
+whitebg 指定轴的背景色 
+who 列出内存中的变量名 
+whos 列出内存中变量的详细信息 
+winter 蓝绿调冬色图 
+workspace 启动内存浏览器 
+
+
+X x , Y y , Z z 
+
+xlabel X轴名 
+xor 或非逻辑 
+yesinput 智能输入指令 
+ylabel Y轴名 
+zeros 全零数组 
+zlabel Z轴名 
+zoom 图形的变焦放大和缩小 
+ztrans 符号计算Z变换 
+
+Matlab中图像函数大全 
+
+图像增强
+
+1. 直方图均衡化的 Matlab 实现
+
+1.1 imhist 函数
+功能：计算和显示图像的色彩直方图
+格式：imhist(I,n)
+        imhist(X,map)
+说明：imhist(I,n) 其中，n 为指定的灰度级数目，缺省值为256；imhist(X,map) 就算和显示索引色图像 X 的直方图，map 为调色板。用
+
+stem(x,counts) 同样可以显示直方图。
+
+1.2 imcontour 函数
+功能：显示图像的等灰度值图
+格式：imcontour(I,n),imcontour(I,v)
+说明：n 为灰度级的个数，v 是有用户指定所选的等灰度级向量。
+
+1.3 imadjust 函数
+功能：通过直方图变换调整对比度
+格式：J=imadjust(I,[low high],[bottom top],gamma)
+        newmap=imadjust(map,[low high],[bottom top],gamma)
+说明：J=imadjust(I,[low high],[bottom top],gamma) 其中，gamma 为校正量r，[low high] 为原图像中要变换的灰度范围，[bottom top]
+
+指定了变换后的灰度范围；newmap=imadjust(map,[low high],[bottom top],gamma) 调整索引色图像的调色板 map 。此时若 [low high] 和
+
+[bottom top] 都为2×3的矩阵，则分别调整 R、G、B 3个分量。
+
+1.4 histeq 函数
+功能：直方图均衡化
+格式：J=histeq(I,hgram)
+        J=histeq(I,n)
+        [J,T]=histeq(I,...)
+        newmap=histeq(X,map,hgram)
+        newmap=histeq(X,map)
+        [new,T]=histeq(X,...)
+说明：J=histeq(I,hgram) 实现了所谓“直方图规定化”，即将原是图象 I 的直方图变换成用户指定的向量 hgram 。hgram 中的每一个元素
+
+都在 [0,1] 中；J=histeq(I,n) 指定均衡化后的灰度级数 n ，缺省值为 64；[J,T]=histeq(I,...) 返回从能将图像 I 的灰度直方图变换成
+
+图像 J 的直方图的变换 T ；newmap=histeq(X,map) 和 [new,T]=histeq(X,...) 是针对索引色图像调色板的直方图均衡。
+
+2. 噪声及其噪声的 Matlab 实现
+        imnoise 函数
+格式：J=imnoise(I,type)
+        J=imnoise(I,type,parameter)
+说明：J=imnoise(I,type) 返回对图像 I 添加典型噪声后的有噪图像 J ，参数 type 和 parameter 用于确定噪声的类型和相应的参数。
+
+3. 图像滤波的 Matlab 实现
+
+3.1 conv2 函数
+功能：计算二维卷积
+格式：C=conv2(A,B)
+        C=conv2(Hcol,Hrow,A)
+        C=conv2(...,'shape')
+说明：对于 C=conv2(A,B) ，conv2 的算矩阵 A 和 B 的卷积，若 [Ma,Na]＝size(A), [Mb,Nb]=size(B), 则 size(C)=[Ma+Mb-1,Na+Nb-1];
+
+C=conv2(Hcol,Hrow,A) 中，矩阵 A 分别与 Hcol 向量在列方向和 Hrow 向量在行方向上进行卷积；C=conv2(...,'shape') 用来指定 conv2
+
+返回二维卷积结果部分，参数 shape 可取值如下：
+        》full 为缺省值，返回二维卷积的全部结果；
+        》same 返回二维卷积结果中与 A 大小相同的中间部分；
+        valid 返回在卷积过程中，未使用边缘补 0 部分进行计算的卷积结果部分，当 size(A)>size(B) 时，size(C)=[Ma-Mb+1,Na-Nb+1]
+
+。
+
+3.2 conv 函数
+功能：计算多维卷积
+格式：与 conv2 函数相同
+
+3.3 filter2函数
+功能：计算二维线型数字滤波，它与函数 fspecial 连用
+格式：Y=filter2(B,X)
+        Y=filter2(B,X,'shape')
+说明：对于 Y=filter2(B,X) ，filter2 使用矩阵 B 中的二维 FIR 滤波器对数据 X 进行滤波，结果 Y 是通过二维互相关计算出来的，其大
+
+小与 X 一样；对于 Y=filter2(B,X,'shape') ，filter2 返回的 Y 是通过二维互相关计算出来的，其大小由参数 shape 确定，其取值如下
+
+：
+        》full 返回二维相关的全部结果，size(Y)>size(X)；
+        》same 返回二维互相关结果的中间部分，Y 与 X 大小相同；
+        》valid 返回在二维互相关过程中，未使用边缘补 0 部分进行计算的结果部分，有 size(Y)<size(X) 。
+
+3.4 fspecial 函数
+功能：产生预定义滤波器
+格式：H=fspecial(type)
+        H=fspecial('gaussian',n,sigma)         高斯低通滤波器
+        H=fspecial('sobel')                          Sobel 水平边缘增强滤波器
+        H=fspecial('prewitt')                       Prewitt 水平边缘增强滤波器
+        H=fspecial('laplacian',alpha)             近似二维拉普拉斯运算滤波器
+        H=fspecial('log',n,sigma)                 高斯拉普拉斯（LoG）运算滤波器
+        H=fspecial('average',n)                   均值滤波器
+        H=fspecial('unsharp',alpha)             模糊对比增强滤波器
+说明：对于形式 H=fspecial(type) ，fspecial 函数产生一个由 type 指定的二维滤波器 H ，返回的 H 常与其它滤波器搭配使用。
+
+4. 彩色增强的 Matlab 实现
+4.1 imfilter函数
+功能：真彩色增强
+格式：B=imfilter(A,h)
+说明：将原始图像 A 按指定的滤波器 h 进行滤波增强处理，增强后的图像 B 与 A 的尺寸和类型相同
+
+图像的变换
+1. 离散傅立叶变换的 Matlab 实现
+      Matlab 函数 fft、fft2 和 fftn 分别可以实现一维、二维和 N 维 DFT 算法；而函数 ifft、ifft2 和 ifftn 则用来计算反 DFT 。
+
+这些函数的调用格式如下：
+         A＝fft(X,N,DIM)
+      其中，X 表示输入图像；N 表示采样间隔点，如果 X 小于该数值，那么 Matlab 将会对 X 进行零填充，否则将进行截取，使之长度为
+
+N ；DIM 表示要进行离散傅立叶变换。
+
+        A＝fft2(X,MROWS,NCOLS) 
+其中，MROWS 和 NCOLS 指定对 X 进行零填充后的 X 大小。
+
+        A＝fftn(X,SIZE)
+其中，SIZE 是一个向量，它们每一个元素都将指定 X 相应维进行零填充后的长度。
+
+      函数 ifft、ifft2 和 ifftn的调用格式于对应的离散傅立叶变换函数一致。
+
+例子：图像的二维傅立叶频谱
+
+% 读入原始图像
+I＝imread('lena.bmp');
+imshow(I)
+% 求离散傅立叶频谱
+J=fftshift(fft2(I));
+figure;
+imshow(log(abs(J)),[8,10])
+
+
+2. 离散余弦变换的 Matlab 实现
+
+2.1. dCT2 函数
+功能：二维 DCT 变换
+格式：B=dct2(A) 
+        B=dct2(A,m,n) 
+        B=dct2(A,[m,n]) 
+说明：B＝dct2(A) 计算 A 的 DCT 变换 B ，A 与 B 的大小相同；B＝dct2(A,m,n) 和 B=dct2(A,[m,n]) 通过对 A 补 0 或剪裁，使 B 的大
+
+小为 m×n。
+
+2.2. dict2 函数
+功能：DCT 反变换
+格式：B=idct2(A) 
+        B=idct2(A,m,n) 
+        B=idct2(A,[m,n]) 
+说明：B＝idct2(A) 计算 A 的 DCT 反变换 B ，A 与 B 的大小相同；B＝idct2(A,m,n) 和 B=idct2(A,[m,n]) 通过对 A 补 0 或剪裁，使 B
+
+的大小为 m×n。
+
+2.3. dctmtx函数
+功能：计算 DCT 变换矩阵
+格式：D＝dctmtx(n)
+说明：D＝dctmtx(n) 返回一个 n×n 的 DCT 变换矩阵，输出矩阵 D 为 double 类型。
+
+
+3. 图像小波变换的 Matlab 实现
+
+3.1 一维小波变换的 Matlab 实现
+(1) dwt 函数
+功能：一维离散小波变换
+格式：[cA,cD]=dwt(X,'wname')
+        [cA,cD]=dwt(X,Lo_D,Hi_D)
+说明：[cA,cD]=dwt(X,'wname') 使用指定的小波基函数 'wname' 对信号 X 进行分解，cA、cD
+
+分别为近似分量和细节分量；[cA,cD]=dwt(X,Lo_D,Hi_D) 使用指定的滤波器组 Lo_D、Hi_D 对信号进行分解。
+(2) idwt 函数
+功能：一维离散小波反变换
+格式：X=idwt(cA,cD,'wname')
+        X=idwt(cA,cD,Lo_R,Hi_R)
+        X=idwt(cA,cD,'wname',L)
+        X=idwt(cA,cD,Lo_R,Hi_R,L)
+说明：X=idwt(cA,cD,'wname') 由近似分量 cA 和细节分量 cD 经小波反变换重构原始信号 X 。
+        'wname' 为所选的小波函数
+        X=idwt(cA,cD,Lo_R,Hi_R) 用指定的重构滤波器 Lo_R 和 Hi_R 经小波反变换重构原始信号 X 。
+        X=idwt(cA,cD,'wname',L) 和 X=idwt(cA,cD,Lo_R,Hi_R,L) 指定返回信号 X 中心附近的 L 个点。
+
+3.2 二维小波变换的 Matlab 实现
+
+          二维小波变换的函数
+-------------------------------------------------
+     函数名                函数功能
+---------------------------------------------------
+     dwt2            二维离散小波变换
+   wavedec2       二维信号的多层小波分解
+     idwt2           二维离散小波反变换
+   waverec2        二维信号的多层小波重构
+   wrcoef2          由多层小波分解重构某一层的分解信号
+   upcoef2          由多层小波分解重构近似分量或细节分量
+   detcoef2         提取二维信号小波分解的细节分量
+   appcoef2        提取二维信号小波分解的近似分量
+   upwlev2         二维小波分解的单层重构
+   dwtpet2         二维周期小波变换
+   idwtper2        二维周期小波反变换
+-------------------------------------------------------------
+
+(1) wcodemat 函数
+功能：对数据矩阵进行伪彩色编码
+格式：Y=wcodemat(X,NB,OPT,ABSOL)
+        Y=wcodemat(X,NB,OPT)
+        Y=wcodemat(X,NB)
+        Y=wcodemat(X)
+说明：Y=wcodemat(X,NB,OPT,ABSOL) 返回数据矩阵 X 的编码矩阵 Y ；NB 伪编码的最大值，即编码范围为 0～NB，缺省值 NB＝16；
+       OPT 指定了编码的方式（缺省值为 'mat'），即：
+                 OPT＝'row' ，按行编码
+                 OPT＝'col' ，按列编码
+                 OPT＝'mat' ，按整个矩阵编码
+       ABSOL 是函数的控制参数（缺省值为 '1'），即：
+                 ABSOL＝0 时，返回编码矩阵
+                 ABSOL＝1 时，返回数据矩阵的绝对值 ABS(X)
+
+(2) dwt2 函数
+功能：二维离散小波变换
+格式：[cA,cH,cV,cD]=dwt2(X,'wname')
+        [cA,cH,cV,cD]=dwt2(X,Lo_D,Hi_D)
+说明：[cA,cH,cV,cD]=dwt2(X,'wname')使用指定的小波基函数 'wname' 对二维信号 X 进行二维离散小波变幻；cA，cH,cV,cD 分别为近似分
+
+量、水平细节分量、垂直细节分量和对角细节分量；[cA,cH,cV,cD]=dwt2(X,Lo_D,Hi_D) 使用指定的分解低通和高通滤波器 Lo_D 和 Hi_D 分
+
+解信号 X 。
+
+(3) wavedec2 函数
+功能：二维信号的多层小波分解
+格式：[C,S]=wavedec2(X,N,'wname')
+        [C,S]=wavedec2(X,N,Lo_D,Hi_D)
+说明：[C,S]=wavedec2(X,N,'wname') 使用小波基函数 'wname' 对二维信号 X 进行 N 层分解；[C,S]=wavedec2(X,N,Lo_D,Hi_D) 使用指定
+
+的分解低通和高通滤波器 Lo_D 和 Hi_D 分解信号 X 。
+
+(4) idwt2 函数
+功能：二维离散小波反变换
+格式：X=idwt2(cA,cH,cV,cD,'wname')
+        X=idwt2(cA,cH,cV,cD,Lo_R,Hi_R)
+        X=idwt2(cA,cH,cV,cD,'wname',S)
+        X=idwt2(cA,cH,cV,cD,Lo_R,Hi_R,S)
+说明：X=idwt2(cA,cH,cV,cD,'wname') 由信号小波分解的近似信号 cA 和细节信号 cH、cH、cV、cD 经小波反变换重构原信号 X
+
+；X=idwt2(cA,cH,cV,cD,Lo_R,Hi_R) 使用指定的重构低通和高通滤波器 Lo_R 和 Hi_R 重构原信号 X ；X=idwt2(cA,cH,cV,cD,'wname',S)
+
+和 X=idwt2(cA,cH,cV,cD,Lo_R,Hi_R,S) 返回中心附近的 S 个数据点。
+
+(5) waverec2 函数
+说明：二维信号的多层小波重构
+格式：X=waverec2(C,S,'wname')
+        X=waverec2(C,S,Lo_R,Hi_R)
+说明：X=waverec2(C,S,'wname') 由多层二维小波分解的结果 C、S 重构原始信号 X ，'wname'
+
+为使用的小波基函数；X=waverec2(C,S,Lo_R,Hi_R) 使用重构低通和高通滤波器 Lo_R 和 Hi_R 重构原信号。
+
+
+图像处理工具箱
+1. 图像和图像数据
+   缺省情况下，MATLAB将图像中的数据存储为双精度类型(double)，64位浮点
+数，所需存储量很大；MATLAB还支持另一种类型无符号整型(uint8)，即图像矩
+阵中每个数据占用1个字节。
+   在使用MATLAB工具箱时，一定要注意函数所要求的参数类型。另外，uint8
+与double两种类型数据的值域不同，编程需注意值域转换。
+          从uint8到double的转换
+   ---------------------------------------------
+       图像类型        MATLAB语句
+   ---------------------------------------------
+     索引色             B=double(A)+1
+     索引色或真彩色 B=double(A)/255
+     二值图像          B=double(A)
+   ---------------------------------------------
+
+         从double到uint8的转换
+   ---------------------------------------------
+       图像类型        MATLAB语句
+   ---------------------------------------------
+    索引色               B=uint8(round(A-1))
+    索引色或真彩色    B=uint8(round(A*255))
+    二值图像            B=logical(uint8(round(A)))
+   ---------------------------------------------
+
+2. 图像处理工具箱所支持的图像类型
+
+2.1 真彩色图像
+    R、G、B三个分量表示一个像素的颜色。如果要读取图像中(100,50)处的像素值，
+可查看三元数据(100,50,1:3)。
+    真彩色图像可用双精度存储，亮度值范围是[0,1]；比较符合习惯的存储方法是用无
+符号整型存储，亮度值范围[0,255]
+   
+2.2 索引色图像
+   包含两个结构，一个是调色板，另一个是图像数据矩阵。调色板是一个有3列和若干行
+的色彩映象矩阵，矩阵每行代表一种颜色，3列分别代表红、绿、蓝色强度的双精度数。
+   
+   注意：MATLAB中调色板色彩强度[0,1]，0代表最暗，1代表最亮。
+          常用颜色的RGB值
+   --------------------------------------------
+    颜色    R   G   B      颜色    R   G   B 
+   --------------------------------------------
+     黑     0   0   1      洋红    1   0   1
+     白     1   1   1      青蓝    0   1   1
+     红     1   0   0      天蓝   0.67 0   1
+     绿     0   1   0      橘黄    1  0.5  0
+     蓝     0   0   1      深红   0.5  0   0
+     黄     1   1   0       灰    0.5 0.5 0.5       
+   --------------------------------------------
+         产生标准调色板的函数
+   -------------------------------------------------
+    函数名       调色板
+   -------------------------------------------------
+     Hsv       色彩饱和度，以红色开始，并以红色结束
+     Hot       黑色－红色－黄色－白色
+     Cool      青蓝和洋红的色度
+     Pink      粉红的色度
+     Gray      线型灰度
+     Bone      带蓝色的灰度
+     Jet        Hsv的一种变形，以蓝色开始，以蓝色结束
+     Copper    线型铜色度
+     Prim       三棱镜，交替为红、橘黄、黄、绿和天蓝
+     Flag       交替为红、白、蓝和黑
+--------------------------------------------------
+   缺省情况下，调用上述函数灰产生一个64×3的调色板，用户也可指定调色板大小。
+   
+   索引色图像数据也有double和uint8两种类型。
+   当图像数据为double类型时，值1代表调色板中的第1行，值2代表第2行……
+   如果图像数据为uint8类型，0代表调色板的第一行，，值1代表第2行……
+
+2.3 灰度图像
+   存储灰度图像只需要一个数据矩阵。
+   数据类型可以是double，[0，1]；也可以是uint8，[0,255]
+
+2.4 二值图像
+   二值图像只需一个数据矩阵，每个像素只有两个灰度值，可以采用uint8或double类型存储。
+   MATLAB工具箱中以二值图像作为返回结果的函数都使用uint8类型。
+
+2.5 图像序列
+   MATLAB工具箱支持将多帧图像连接成图像序列。
+   图像序列是一个4维数组，图像帧的序号在图像的长、宽、颜色深度之后构成第4维。
+   分散的图像也可以合并成图像序列，前提是各图像尺寸必须相同，若是索引色图像，
+调色板也必须相同。
+   可参考cat()函数    A＝cat(4,A1,A2,A3,A4,A5)
+
+3. MATLAB图像类型转换
+         图像类型转换函数
+   ---------------------------------------------------------------------------
+     函数名                      函数功能
+   ---------------------------------------------------------------------------
+     dither       图像抖动，将灰度图变成二值图，或将真彩色图像抖动成索引色图像
+    gray2ind    将灰度图像转换成索引图像
+    grayslice    通过设定阈值将灰度图像转换成索引色图像
+     im2bw      通过设定亮度阈值将真彩色、索引色、灰度图转换成二值图
+    ind2gray    将索引色图像转换成灰度图像
+    ind2rgb      将索引色图像转换成真彩色图像
+    mat2gray   将一个数据矩阵转换成一副灰度图
+    rgb2gray    将一副真彩色图像转换成灰度图像
+    rgb2ind      将真彩色图像转换成索引色图像
+   ----------------------------------------------------------------------------
+
+4. 图像文件的读写和查询
+
+4.1 图形图像文件的读取
+   利用函数imread()可完成图形图像文件的读取，语法：
+
+     A=imread(filename,fmt)
+     [X,map]=imread(filename,fmt)
+     [...]=imread(filename)
+     [...]=imread(filename,idx) （只对TIF格式的文件）
+     [...]=imread(filename,ref) （只对HDF格式的文件）
+
+   通常，读取的大多数图像均为8bit，当这些图像加载到内存中时，Matlab就将其存放
+在类uint8中。此为Matlab还支持16bit的PNG和TIF图像，当读取这类文件时，Matlab就将
+其存贮在uint16中。
+
+   注意：对于索引图像，即使图像阵列的本身为类uint8或类uint16，imread函数仍将
+颜色映象表读取并存贮到一个双精度的浮点类型的阵列中。
+
+4.2 图形图像文件的写入
+   使用imwrite函数，语法如下：
+
+   imwrite(A,filename,fmt)
+   imwrite(X,map,filename,fmt)
+   imwrite(...,filename)
+   imwrite(...,parameter,value)
+
+   当利用imwrite函数保存图像时，Matlab缺省的方式是将其简化道uint8的数据格式。
+
+4.3 图形图像文件信息的查询   imfinfo()函数
+
+5. 图像文件的显示
+
+5.1 索引图像及其显示
+
+   方法一：
+          image(X)
+          colormap(map)
+
+   方法二： 
+          imshow(X,map)
+
+5.2 灰度图像及其显示
+   Matlab 7.0 中，要显示一副灰度图像，可以调用函数 imshow 或 imagesc （即 
+imagescale，图像缩放函数）
+
+   (1) imshow 函数显示灰度图像
+    使用 imshow(I)    或 使用明确指定的灰度级书目：imshow(I,32)
+    
+    由于Matlab自动对灰度图像进行标度以适合调色板的范围，因而可以使用自定义
+大小的调色板。其调用格式如下：
+           imshow(I,[low,high])
+    其中，low 和 high 分别为数据数组的最小值和最大值。
+
+   (2) imagesc 函数显示灰度图像
+   下面的代码是具有两个输入参数的 imagesc 函数显示一副灰度图像
+       imagesc(1,[0,1]);
+       colormap(gray);
+    imagesc 函数中的第二个参数确定灰度范围。灰度范围中的第一个值（通常是0），
+对应于颜色映象表中的第一个值（颜色），第二个值（通常是1）则对应与颜色映象表
+中的最后一个值（颜色）。灰度范围中间的值则线型对应与颜色映象表中剩余的值（颜色）。
+
+    在调用 imagesc 函数时，若只使用一个参数，可以用任意灰度范围显示图像。在该
+调用方式下，数据矩阵中的最小值对应于颜色映象表中的第一个颜色值，数据矩阵中的最大
+值对应于颜色映象表中的最后一个颜色值。
+
+5.3 RGB 图像及其显示
+   (1) image(RGB) 
+   不管RGB图像的类型是double浮点型，还是 uint8 或 uint16 无符号整数型，Matlab都
+能通过 image 函数将其正确显示出来。
+
+   RGB8 = uint8(round(RGB64×255)); ％ 将 double 浮点型转换为 uint8 无符号整型
+   RGB64 = double(RGB8)/255;            ％ 将 uint8 无符号整型转换为 double 浮点型
+   RGB16 = uint16(round(RGB64×65535)); ％ 将 double 浮点型转换为 uint16 无符号整型 
+   RGB64 = double(RGB16)/65535;      ％ 将 uint16 无符号整型转换为 double 浮点型
+
+   (2) imshow(RGB) 参数是一个 m×n×3 的数组
+
+5.4 二进制图像及其显示
+
+   (1) imshow(BW)
+   在 Matlab 7.0 中，二进制图像是一个逻辑类，仅包括 0 和 1 两个数值。像素 0 显示
+为黑色，像素 1 显示为白色。
+   显示时，也可通过NOT(~)命令，对二进制图象进行取反，使数值 0 显示为白色；1 显示
+为黑色。 
+   例如： imshow(~BW)
+
+   (2) 此外，还可以使用一个调色板显示一副二进制图像。如果图形是 uint8 数据类型，
+则数值 0 显示为调色板的第一个颜色，数值 1 显示为第二个颜色。
+   例如： imshow(BW,[1 0 0;0 0 1])   
+
+5.5 直接从磁盘显示图像
+   可使用一下命令直接进行图像文件的显示： 
+        imshow filename
+   其中，filename 为要显示的图像文件的文件名。
+
+   如果图像是多帧的，那么 imshow 将仅显示第一帧。但需注意，在使用这种方式时，图像
+数据没有保存在Matlab 7.0 工作平台。如果希望将图像装入工作台中，需使用 getimage 函
+数，从当前的句柄图形图像对象中获取图像数据，
+   命令形式为： rgb ＝ getimage;
+
+
+
+bwlabel 
+功能： 
+标注二进制图像中已连接的部分。 
+L = bwlabel(BW,n) 
+[L,num] = bwlabel(BW,n)
+
+isbw 
+功能： 
+判断是否为二进制图像。 
+语法： 
+flag = isbw(A) 
+相关命令： 
+isind, isgray, isrgb 
+74．isgray 
+功能： 
+判断是否为灰度图像。 
+语法： 
+flag = isgray(A) 
+相关命令： 
+isbw, isind, isrgb
+
+11．bwselect 
+功能： 
+在二进制图像中选择对象。 
+语法： 
+BW2 = bwselect(BW1,c,r,n) 
+BW2 = bwselect(BW1,n) 
+[BW2,idx] = bwselect(...) 
+举例 
+BW1 = imread('text.tif'); 
+c = [16 90 144]; 
+r = [85 197 247]; 
+BW2 = bwselect(BW1,c,r,4); 
+imshow(BW1) 
+figure, imshow(BW2)
+
+47．im2bw 
+功能： 
+转换图像为二进制图像。 
+语法： 
+BW = im2bw(I,level) 
+BW = im2bw(X,map,level) 
+BW = im2bw(RGB,level) 
+举例 
+load trees 
+BW = im2bw(X,map,0.4); 
+imshow(X,map)
+  
