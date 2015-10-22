@@ -1,1 +1,0 @@
-# gitnotes2nd
